@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Text Adventure </title>
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+
+
+    <body>
+        <!--start-->
+        <div id="start">
+            <h1>Welcome Lost One, who do you want to be?</h1>
+            <h1 id="yourStrander"> Your Stranders: Leroy, Olli, Red, Stan, Ki </h1>
+            <input id="Le" value="Leroy" type="button" onclick="Le();"> 
+                <input id="Ol" value="Olli" type="button" onclick="Ol();"> 
+                    <input id="Re" value="Red" type="button" onclick="Re();"> 
+                        <input id="St" value="Stan" type="button" onclick="St();"> 
+                            <input id="K" value="Ki" type="button" onclick="K();"> 
+        </div>
+        <div id="youCrashed" >
+            <h1> You're Strander on an abandoned island</h1>
+        </div>
+
+        <div id="strangeSounds" >
+            <!--TB = The Beast-->
+                <h1 id="TBnoise"></h1>
+                    <h1 id="yournotAlone"></h1>
+        </div>
+        <div id="worry">
+            <h1>You try to think of how to get off this island and get home. You know that you aren't far from homeland, you just need some-thing to float one.</h1>
+                <h1>It is starting to fall into nighttime. You know you can't be in the open: Do you search for Shelter or Build your own? </h1>
+                    <input type="button" id="build" value="Build yourself some Shelter" onclick="buildShelter();">
+                        <img style="display: none;" src="built.jpg" id="B">
+                        <h1 style="display: none;"  id="B" >It's gonna take a while, but lets get started</h1>
+                        <h2 style="display: none;"  id="B" > ....A few hours later...</h2>
+                                <h2  style="display: none;"  id="B">.....Tada, look at this wonderful hut we built. Now let's try and get some rest</h2>
+                            <input type="button" id="searchShelt" value="Look for Shelter" onclick="searchShelter();">
+                                <img style="display: none;" src="beechshelt.jpg" id="shelt">
+                                <h1 style="display: none;" id="shelt">I don't know if anything is near or not, but lets look.</h1>
+                                    <h2 id="shelt" style="display: none;">....A few hours later.....</h2>
+                                        <h2 id="shelt" style="display: none;">... Oh my gosh! We found some-thing, and not too far from the beach, and my boat. Goodnight!</h2>
+        </div>      
+
+
+        <div id="morning" >
+            <h1>You wake up with an uneasy feeling. You decide to try to get material to get off this darn island and get home. You set out into the jungle to find things that you can use to repair your boat or build a new raft.</h1>
+                <h2>Do you want to try and repair your boat or build a new one?</h2>
+                    <input type="button" value="Repair your Boat" id="repairBoat">
+                        <input id="buildNew" type="button" value="Try and Build a new one">
+        </div>
+        <div id="repairBoat">
+            <h1>.</h1>
+                <h2>.</h2>
+                    <img>
+                        <h2></h2>
+        </div>
+        <div id="TheBeast" >
+            <h1>The Beast comes out of hiding, DONT LET HIM EAT YOU!! YOU MUST KILL HIM!</h1>
+                <h2>REMEMBER!</h2>
+                    <h3>Hit select your strander once, then hit roll untill the beast has fallen!!!</h3>
+                        <input type="button" id="strand" value="Select Your Strander" onClick="stranderSelection();">
+                            <input type="button" value="Roll" onClick="stranderRoll();">
+                                <h2 id="stranderDice"></h2>
+                                    <h2 id="beastDice"></h2>
+                                        <h3 id="stranderHp"></h3>
+                                            <h3 id="beastHp"></h3>
+                                                <h4 id="stranderWon"></h4>
+                                                   <h4 id="beastWon"></h4>
+        </div>
+
+        <script src="text.js"></script>
+
+    </body>
+
+</html>
